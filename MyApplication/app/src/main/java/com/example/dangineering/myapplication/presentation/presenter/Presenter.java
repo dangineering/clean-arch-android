@@ -1,0 +1,16 @@
+package com.example.dangineering.myapplication.presentation.presenter;
+
+import com.example.dangineering.myapplication.presentation.views.View;
+
+public interface Presenter<T extends View> {
+
+    void initialize();
+
+    void onViewCreate();
+
+    void onViewResume();
+
+    void onViewDestroy();
+
+    void setView(T view);
+}
