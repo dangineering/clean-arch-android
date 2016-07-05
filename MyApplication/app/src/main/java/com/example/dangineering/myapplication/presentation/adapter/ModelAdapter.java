@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.dangineering.myapplication.R;
+import com.example.dangineering.myapplication.presentation.recyclerview.GettyViewHolder;
+import com.example.dangineering.myapplication.presentation.viewmodel.ImageViewModel;
 import com.example.dangineering.myapplication.presentation.viewmodel.SampleViewModel;
 import com.squareup.picasso.Picasso;
 
@@ -17,64 +19,41 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ViewHolder> {
+public class ModelAdapter extends RecyclerView.Adapter<GettyViewHolder> {
 
-    private List<SampleViewModel> models;
+    private List<ImageViewModel> imageViewModels;
 
     public ModelAdapter() {
-        models = new ArrayList<SampleViewModel>();
+        imageViewModels = new ArrayList<>();
     }
 
-    public ModelAdapter(List<SampleViewModel> models) {
-        this.models = models;
+    public void setData(List<ImageViewModel> imageViewModels) {
+        this.imageViewModels.clear();
+        this.imageViewModels.addAll(imageViewModels);
+        notifyDataSetChanged();
+    }
+
+
+    @Override
+    public GettyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        // inflate and return view holder
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_itme_view, parent, false);  // it will crash without this!
+        return new GettyViewHolder(view);
     }
 
     @Override
+    public void onBindViewHolder(GettyViewHolder holder, int position) {
 
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-//        View modelView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.model, viewGroup, false);
-//        return new ViewHolder(modelView);
-    }
+        ImageViewModel curImageViewModel = imageViewModels.get(position);
 
-    @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        SampleViewModel model = models.get(position);
+        holder.setImageUri(curImageViewModel.getImageUrl());
+        holder.setTextView(curImageViewModel.getDescription());
 
-//        viewHolder.modelTitle.setText(model.getTitle());
-//        viewHolder.modelSubtitle.setText(model.getSubtitle());
-//
-//        Picasso.with(viewHolder.view.getContext())
-//                .load(model.getImageUrl())
-//                .into(viewHolder.imageView);
     }
 
     @Override
     public int getItemCount() {
-        return models.size();
-    }
-
-    public void add(SampleViewModel model) {
-        models.add(model);
-        notifyDataSetChanged();
-    }
-
-    public void add(List<SampleViewModel> models) {
-        this.models.addAll(models);
-        notifyDataSetChanged();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        View view;
-
-//        @BindView(R.id.model_title)
-//        TextView modelTitle;
-
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
-            this.view = itemView;
-        }
+        return imageViewModels.size();
     }
 }

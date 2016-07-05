@@ -1,14 +1,16 @@
 package com.example.dangineering.myapplication.presentation.views;
 
+import com.example.dangineering.myapplication.presentation.viewmodel.ImageViewModel;
 import com.example.dangineering.myapplication.presentation.viewmodel.SampleViewModel;
 
 import java.util.List;
 
 public interface ModelListView extends View {
 
-    void add(SampleViewModel sampleViewModel);
+    void add(ImageViewModel sampleViewModel);
 
-    void add(List<SampleViewModel> sampleViewModelList);
+    void add(List<ImageViewModel> sampleViewModelList);
 
-    void remove(SampleViewModel sampleViewModel);
+    void remove(ImageViewModel sampleViewModel);
+
 }

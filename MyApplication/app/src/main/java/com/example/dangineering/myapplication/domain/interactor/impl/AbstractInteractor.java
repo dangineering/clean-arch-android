@@ -1,6 +1,6 @@
-package com.example.dangineering.myapplication.domain.impl;
+package com.example.dangineering.myapplication.domain.interactor.impl;
 
-import com.example.dangineering.myapplication.domain.Interactor;
+import com.example.dangineering.myapplication.domain.interactor.Interactor;
 import com.example.dangineering.myapplication.executors.InteractorExecutor;
 import com.example.dangineering.myapplication.executors.MainThreadExecutor;
 

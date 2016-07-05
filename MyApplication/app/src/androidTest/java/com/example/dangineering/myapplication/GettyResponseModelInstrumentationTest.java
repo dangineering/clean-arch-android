@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  */
 @MediumTest
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentationTest {
+public class GettyResponseModelInstrumentationTest {
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.

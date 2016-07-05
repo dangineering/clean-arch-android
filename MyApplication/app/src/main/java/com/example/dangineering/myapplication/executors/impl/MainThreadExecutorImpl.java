@@ -16,6 +16,6 @@ public class MainThreadExecutorImpl implements MainThreadExecutor {
 
     @Override
     public void execute(Runnable runnable) {
-
+        handler.post(runnable);
     }
 }

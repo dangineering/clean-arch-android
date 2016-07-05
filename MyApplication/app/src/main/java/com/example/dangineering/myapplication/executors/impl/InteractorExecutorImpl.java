@@ -2,7 +2,7 @@ package com.example.dangineering.myapplication.executors.impl;
 
 import android.support.annotation.NonNull;
 
-import com.example.dangineering.myapplication.domain.Interactor;
+import com.example.dangineering.myapplication.domain.interactor.Interactor;
 import com.example.dangineering.myapplication.executors.InteractorExecutor;
 
 import java.util.concurrent.BlockingQueue;

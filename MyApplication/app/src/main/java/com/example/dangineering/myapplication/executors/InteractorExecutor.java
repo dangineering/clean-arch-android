@@ -1,6 +1,6 @@
 package com.example.dangineering.myapplication.executors;
 
-import com.example.dangineering.myapplication.domain.Interactor;
+import com.example.dangineering.myapplication.domain.interactor.Interactor;
 
 /**
  * Interface for an executor that will run one or more interactors, which implement Runnable

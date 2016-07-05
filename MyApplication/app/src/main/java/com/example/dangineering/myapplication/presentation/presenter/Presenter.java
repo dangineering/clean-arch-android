@@ -13,4 +13,6 @@ public interface Presenter<T extends View> {
     void onViewDestroy();
 
     void setView(T view);
+
+    View getView();
 }
