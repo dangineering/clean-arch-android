@@ -7,7 +7,7 @@ import dagger.Module;
 
 @Module
 public class AuthModule {
-    
+
 
     Context context;
 
