@@ -44,7 +44,7 @@ public class GettyApiRepository implements ImageRepository {
                 .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
-                        Request request = chain.request().newBuilder().addHeader("Api-Key", "nbe4gxpc8jfqr6xvr6j4dh7b").build();
+                        Request request = chain.request().newBuilder().addHeader("Api-Key", "api-key").build();
                         return chain.proceed(request);
                     }
                 })
