@@ -9,7 +9,8 @@ public interface Presenter<T extends View> {
     void onViewCreate();
 
     void onViewResume();
-
+    
+    // Release resources
     void onViewDestroy();
 
     void setView(T view);

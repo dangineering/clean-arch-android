@@ -10,7 +10,7 @@ import java.util.List;
 
 public class GetGettyImagesImpl extends com.example.dangineering.myapplication.domain.interactor.impl.AbstractInteractor implements GetGettyImages {
 
-    // interactor impl depends on repository and callback
+    // interactor impl depends on repository and callback and arguments
 
     ImageRepository imageRepository;
     Callback callback;
