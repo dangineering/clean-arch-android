@@ -1,6 +1,6 @@
 package com.example.dangineering.myapplication.domain.interactor;
 
-import com.example.dangineering.myapplication.data.model.ImageModel;
+import com.example.dangineering.myapplication.data.model.SampleImageModel;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public interface GetGettyImages {
 
     interface Callback {
 
-        void onResult(List<ImageModel> modelList);
+        void onResult(List<SampleImageModel> modelList);
 
         void onError();
     }

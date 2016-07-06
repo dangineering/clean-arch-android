@@ -6,14 +6,12 @@ import android.content.Context;
 import dagger.Module;
 
 @Module
-public class AuthModule {
-
+public class SampleModule {
 
     Context context;
 
-    public AuthModule(Context context) {
+    public SampleModule(Context context) {
         this.context = context;
     }
-
 
 }

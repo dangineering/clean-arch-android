@@ -4,20 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.dangineering.myapplication.R;
 import com.example.dangineering.myapplication.presentation.recyclerview.GettyViewHolder;
 import com.example.dangineering.myapplication.presentation.viewmodel.ImageViewModel;
-import com.example.dangineering.myapplication.presentation.viewmodel.SampleViewModel;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class ModelAdapter extends RecyclerView.Adapter<GettyViewHolder> {
 

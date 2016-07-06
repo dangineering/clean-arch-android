@@ -1,14 +1,12 @@
 package com.example.dangineering.myapplication.data.model;
 
-public class ImageModel {
-
-
+public class SampleImageModel {
 
     private String imageUrl;
 
     private String description;
 
-    public ImageModel(String imageUrl, String description) {
+    public SampleImageModel(String imageUrl, String description) {
         this.imageUrl = imageUrl;
         this.description = description;
     }

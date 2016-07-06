@@ -1,7 +1,6 @@
 package com.example.dangineering.myapplication.presentation.views;
 
 import com.example.dangineering.myapplication.presentation.viewmodel.ImageViewModel;
-import com.example.dangineering.myapplication.presentation.viewmodel.SampleViewModel;
 
 import java.util.List;
 

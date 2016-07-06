@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,19 +11,14 @@ import android.widget.EditText;
 import com.example.dangineering.myapplication.R;
 import com.example.dangineering.myapplication.presentation.adapter.ModelAdapter;
 import com.example.dangineering.myapplication.presentation.presenter.GettyPresenter;
-import com.example.dangineering.myapplication.presentation.presenter.impl.GettyPresenterImpl;
 import com.example.dangineering.myapplication.presentation.viewmodel.ImageViewModel;
-import com.example.dangineering.myapplication.presentation.viewmodel.SampleViewModel;
 import com.example.dangineering.myapplication.presentation.views.ModelListView;
 
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 public class MainActivity extends AppCompatActivity implements ModelListView {
 
-    GettyPresenter gettyPresenter;
 
     RecyclerView recyclerView;
     ModelAdapter modelAdapter;
@@ -46,9 +40,7 @@ public class MainActivity extends AppCompatActivity implements ModelListView {
     }
 
     private void initPresenter() {
-        gettyPresenter = new GettyPresenterImpl();
-        gettyPresenter.initialize();
-        gettyPresenter.setView(this);
+
     }
 
     private void initModelListAdapter() {
@@ -70,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements ModelListView {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gettyPresenter.onSearch(searchBox.getText().toString());
+
             }
         });
     }

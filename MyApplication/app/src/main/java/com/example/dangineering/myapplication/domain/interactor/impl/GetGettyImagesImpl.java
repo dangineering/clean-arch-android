@@ -1,7 +1,7 @@
 package com.example.dangineering.myapplication.domain.interactor.impl;
 
-import com.example.dangineering.myapplication.data.model.ImageModel;
-import com.example.dangineering.myapplication.data.repository.ImageRepository;
+import com.example.dangineering.myapplication.data.model.SampleImageModel;
+import com.example.dangineering.myapplication.data.repository.SampleImageRepository;
 import com.example.dangineering.myapplication.domain.interactor.GetGettyImages;
 import com.example.dangineering.myapplication.executors.InteractorExecutor;
 import com.example.dangineering.myapplication.executors.MainThreadExecutor;
@@ -12,15 +12,15 @@ public class GetGettyImagesImpl extends com.example.dangineering.myapplication.d
 
     // interactor impl depends on repository and callback and arguments
 
-    ImageRepository imageRepository;
+    SampleImageRepository sampleImageRepository;
     Callback callback;
     String query;
 
 
     // Constructor takes in repository
-    public GetGettyImagesImpl(InteractorExecutor interactorExecutor, MainThreadExecutor mainThreadExecutor, ImageRepository imageRepository) {
+    public GetGettyImagesImpl(InteractorExecutor interactorExecutor, MainThreadExecutor mainThreadExecutor, SampleImageRepository sampleImageRepository) {
         super(interactorExecutor, mainThreadExecutor);
-        this.imageRepository = imageRepository;
+        this.sampleImageRepository = sampleImageRepository;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class GetGettyImagesImpl extends com.example.dangineering.myapplication.d
     @Override
     public void run() {
 
-        final List<ImageModel> images = imageRepository.getImageModels(query);
+        final List<SampleImageModel> images = sampleImageRepository.getImageModels(query);
 
         getMainThreadExecutor().execute(new Runnable() {
             @Override
